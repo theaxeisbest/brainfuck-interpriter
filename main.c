@@ -87,7 +87,7 @@ char* Optimise(char* file)
 
             n++;
 
-            while (file[n] == file[n - 1] && n <= size && optimizedPrg[prgWriteHead] < 90)
+            while (file[n] == file[n - 1] && n <= length && optimizedPrg[prgWriteHead] < 90)
             {
                 optimizedPrg[prgWriteHead]++;
                 n++;
