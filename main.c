@@ -56,7 +56,7 @@ char* Optimise(char* file)
             realSize++;
         }
     }
-    char* optimizedPrg = (char*)malloc(size + 1);
+    char* optimizedPrg = (char*)malloc(realSize + 1);
 
     optimizedPrg[size] = '\0';
 
@@ -64,7 +64,7 @@ char* Optimise(char* file)
 
     unsigned long long int n = 0;
 
-    while (n <= size)
+    while (prgWriteHead <= realSize)
     {
         if (file[n] == '[' ||
             file[n] == ']' ||
