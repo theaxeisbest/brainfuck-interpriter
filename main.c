@@ -64,7 +64,7 @@ char* Optimise(char* file)
 
     unsigned long long int n = 0;
 
-    while (prgWriteHead <= realSize)
+    while (prgWriteHead < realSize)
     {
         if (file[n] == '[' ||
             file[n] == ']' ||
@@ -237,6 +237,12 @@ int main(int argc, char *argv[])
     size_t* length = (size_t*)malloc(sizeof(size_t)); 
 
     char* file = LoadFile(argv[1], length);
+
+    if (file == 0)
+    {
+        printf("NO FILE NAMED: %s\n", argv[1]);
+        return -3;
+    }
 
     char* optimizedPrg = Optimise(file);
 
