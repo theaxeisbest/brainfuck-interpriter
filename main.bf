@@ -1,1 +1,1 @@
-this is not brainfuck! +[.+aaaaaa+]
+this is brainfuck! +[.+aaaaaa+]
